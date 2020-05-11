@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1 v-if="conectado">
+            Estoy conectado
+        </h1>
+        <h1 v-if="edad < 18">
+            No puedes entrar
+        </h1>
+        <h1 v-else-if="edad > 200">
+            eres viejo
+        </h1>
+
+        <h1 v-else>
+            Puedes entrar
+        </h1>
+
+        <template v-if="conectado">
+            <h1>
+                Bienvenido Aaron
+            </h1>
+            <ul>
+                <li>
+                    <a href="#">mis datos</a>
+                    <a href="#">Mensajes</a>
+                    <a href="#">Salir</a>
+                </li>
+            </ul>
+        </template>
+        <h2 v-else> NO estas conectado</h2>
+
+    </main>
+    <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+    <script src="main2.js"></script>
+</body>
+
+</html>
